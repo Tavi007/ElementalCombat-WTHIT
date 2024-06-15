@@ -18,10 +18,10 @@ public class WailaTooltipRenderer implements ITooltipRenderer {
     public Dimension getSize(CompoundTag data, ICommonAccessor accessor) {
         if (accessor.getEntity() != null && accessor.getEntity() instanceof LivingEntity) {
             LivingEntity living = (LivingEntity) accessor.getEntity();
-            return ElementalCombatDataRenderAPI.getTooltipDimension(true, living);
+            return ElementalCombatDataRenderAPI.getTooltipDimension(ClientConfig.isDefenseDoubleRow(), living);
         } else if (accessor.getStack() != null) {
             ItemStack stack = accessor.getStack();
-            return ElementalCombatDataRenderAPI.getTooltipDimension(true, stack);
+            return ElementalCombatDataRenderAPI.getTooltipDimension(ClientConfig.isDefenseDoubleRow(), stack);
         }
         return new Dimension();
     }
