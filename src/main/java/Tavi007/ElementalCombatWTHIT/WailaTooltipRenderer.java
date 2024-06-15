@@ -30,13 +30,13 @@ public class WailaTooltipRenderer implements ITooltipRenderer {
     public void draw(CompoundNBT data, ICommonAccessor accessor, int x, int y) {
         Entity entity = accessor.getEntity();
         if (entity != null && entity instanceof LivingEntity) {
-            ElementalCombatDataRenderAPI.renderTextAndIcons(new MatrixStack(), x, y, true, (LivingEntity) entity);
+            ElementalCombatDataRenderAPI.renderTextAndIcons(new MatrixStack(), x, y, ClientConfig.isDefenseDoubleRow(), (LivingEntity) entity);
             return;
         }
 
         ItemStack stack = accessor.getStack();
         if (stack != null) {
-            ElementalCombatDataRenderAPI.renderTextAndIcons(new MatrixStack(), x, y, true, stack);
+            ElementalCombatDataRenderAPI.renderTextAndIcons(new MatrixStack(), x, y, ClientConfig.isDefenseDoubleRow(), stack);
             return;
         }
     }
