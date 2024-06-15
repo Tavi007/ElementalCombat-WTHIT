@@ -2,20 +2,20 @@ package Tavi007.ElementalCombatWTHIT;
 
 import java.awt.Dimension;
 
-import com.mojang.blaze3d.matrix.MatrixStack;
+import com.mojang.blaze3d.vertex.PoseStack;
 
 import Tavi007.ElementalCombat.api.ElementalCombatDataRenderAPI;
 import mcp.mobius.waila.api.ICommonAccessor;
 import mcp.mobius.waila.api.ITooltipRenderer;
-import net.minecraft.entity.Entity;
-import net.minecraft.entity.LivingEntity;
-import net.minecraft.item.ItemStack;
-import net.minecraft.nbt.CompoundNBT;
+import net.minecraft.nbt.CompoundTag;
+import net.minecraft.world.entity.Entity;
+import net.minecraft.world.entity.LivingEntity;
+import net.minecraft.world.item.ItemStack;
 
 public class WailaTooltipRenderer implements ITooltipRenderer {
 
     @Override
-    public Dimension getSize(CompoundNBT data, ICommonAccessor accessor) {
+    public Dimension getSize(CompoundTag data, ICommonAccessor accessor) {
         if (accessor.getEntity() != null && accessor.getEntity() instanceof LivingEntity) {
             LivingEntity living = (LivingEntity) accessor.getEntity();
             return ElementalCombatDataRenderAPI.getTooltipDimension(true, living);
@@ -27,16 +27,16 @@ public class WailaTooltipRenderer implements ITooltipRenderer {
     }
 
     @Override
-    public void draw(CompoundNBT data, ICommonAccessor accessor, int x, int y) {
+    public void draw(PoseStack poseStack, CompoundTag data, ICommonAccessor accessor, int x, int y) {
         Entity entity = accessor.getEntity();
         if (entity != null && entity instanceof LivingEntity) {
-            ElementalCombatDataRenderAPI.renderTextAndIcons(new MatrixStack(), x, y, true, (LivingEntity) entity);
+            ElementalCombatDataRenderAPI.renderTextAndIcons(poseStack, x, y, true, (LivingEntity) entity);
             return;
         }
 
         ItemStack stack = accessor.getStack();
         if (stack != null) {
-            ElementalCombatDataRenderAPI.renderTextAndIcons(new MatrixStack(), x, y, true, stack);
+            ElementalCombatDataRenderAPI.renderTextAndIcons(poseStack, x, y, true, stack);
             return;
         }
     }

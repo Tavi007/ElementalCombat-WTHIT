@@ -21,25 +21,25 @@ description= "A WTHIT plugin for the mod Elemental Combat."
 [[dependencies.elementalcombat_wthit]] #optional
     modId="forge" #mandatory
     mandatory=true #mandatory
-    versionRange="[36,)" #mandatory
+    versionRange="[37,)" #mandatory
     ordering="NONE"
     side="BOTH"
 # Here's another dependency
 [[dependencies.elementalcombat_wthit]]
     modId="minecraft"
     mandatory=true
-    versionRange="[1.16.5]"
+    versionRange="[1.17.1]"
     ordering="NONE"
     side="BOTH"
 [[dependencies.elementalcombat_wthit]]
     modId="elementalcombat"
     mandatory=true
-    versionRange="[1.2.0.5,)"
+    versionRange="[1.2.1.4,)"
     ordering="NONE"
     side="BOTH"
 [[dependencies.elementalcombat_wthit]]
     modId="wthit"
     mandatory=true
-    versionRange="[2.10.14,)"
+    versionRange="[3.11.2,)"
     ordering="NONE"
     side="BOTH"
