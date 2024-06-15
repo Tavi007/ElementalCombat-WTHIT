@@ -1,0 +1,45 @@
+modLoader="javafml" #mandatory
+loaderVersion="[36,)" #mandatory This is typically bumped every Minecraft version by Forge. See our download page for lists of versions.
+license="All rights reserved"
+
+#issueTrackerURL="http://my.issue.tracker/" #optional
+[[mods]] #mandatory
+modId = "elementalcombat_wthit" #mandatory
+version = "1.0" #mandatory
+
+displayName = "Elemental Combat - WTHIT" #mandatory
+#updateJSONURL = "http://myurl.me/" #optional
+#displayURL = "http://example.com/" #optional
+issueTrackerURL="https://github.com/Tavi007/ElementalCombat-WTHIT/issues" #optional
+logoFile = "Icon.png" #optional. A file name (in the root of the mod JAR) containing a logo for display
+credits = "Thanks goes to the Forge Forum" #optional
+authors = "Tavi007" #optional
+
+description= "A WTHIT plugin for the mod Elemental Combat."
+
+# A dependency - use the . to indicate dependency for a specific modid. Dependencies are optional.
+[[dependencies.elementalcombat_wthit]] #optional
+    modId="forge" #mandatory
+    mandatory=true #mandatory
+    versionRange="[36,)" #mandatory
+    ordering="NONE"
+    side="BOTH"
+# Here's another dependency
+[[dependencies.elementalcombat_wthit]]
+    modId="minecraft"
+    mandatory=true
+    versionRange="[1.16.5]"
+    ordering="NONE"
+    side="BOTH"
+[[dependencies.elementalcombat_wthit]]
+    modId="elementalcombat"
+    mandatory=true
+    versionRange="[1.2.0.5]"
+    ordering="NONE"
+    side="BOTH"
+[[dependencies.elementalcombat_wthit]]
+    modId="wthit"
+    mandatory=true
+    versionRange="[2.10.14]"
+    ordering="NONE"
+    side="BOTH"
