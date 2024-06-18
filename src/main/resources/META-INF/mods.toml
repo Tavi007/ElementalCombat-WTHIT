@@ -1,11 +1,11 @@
 modLoader="javafml" #mandatory
-loaderVersion="[36,)" #mandatory This is typically bumped every Minecraft version by Forge. See our download page for lists of versions.
+loaderVersion="[44,)" #mandatory This is typically bumped every Minecraft version by Forge. See our download page for lists of versions.
 license="All rights reserved"
 
 #issueTrackerURL="http://my.issue.tracker/" #optional
 [[mods]] #mandatory
 modId = "elementalcombat_wthit" #mandatory
-version = "1.3" #mandatory
+version = "1.4" #mandatory
 
 displayName = "Elemental Combat - WTHIT" #mandatory
 #updateJSONURL = "http://myurl.me/" #optional
