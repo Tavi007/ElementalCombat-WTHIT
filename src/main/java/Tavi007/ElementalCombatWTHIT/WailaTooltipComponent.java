@@ -2,12 +2,11 @@ package Tavi007.ElementalCombatWTHIT;
 
 import java.awt.Dimension;
 
-import com.mojang.blaze3d.vertex.PoseStack;
-
 import Tavi007.ElementalCombat.api.ElementalCombatDataRenderAPI;
 import Tavi007.ElementalCombat.capabilities.attack.AttackLayer;
 import Tavi007.ElementalCombat.capabilities.defense.DefenseLayer;
 import mcp.mobius.waila.api.ITooltipComponent;
+import net.minecraft.client.gui.GuiGraphics;
 
 public class WailaTooltipComponent implements ITooltipComponent {
 
@@ -32,8 +31,8 @@ public class WailaTooltipComponent implements ITooltipComponent {
     }
 
     @Override
-    public void render(PoseStack poseStack, int posX, int posY, float delta) {
-        ElementalCombatDataRenderAPI.renderTextAndIcons(poseStack, posX, posY, false, attackLayer, defenseLayer);
+    public void render(GuiGraphics guiGraphics, int posX, int posY, float delta) {
+        ElementalCombatDataRenderAPI.renderTextAndIcons(guiGraphics, posX, posY, false, attackLayer, defenseLayer);
     }
 
 }
