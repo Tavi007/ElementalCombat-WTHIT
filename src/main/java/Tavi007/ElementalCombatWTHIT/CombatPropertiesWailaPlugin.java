@@ -15,7 +15,6 @@ public class CombatPropertiesWailaPlugin implements IWailaPlugin {
     @Override
     public void register(IRegistrar registrar) {
         registrar.addComponent(HUDHandlerEntities.INSTANCE, TooltipPosition.BODY, LivingEntity.class);
-        registrar.addRenderer(COMBAT_PROPERTIES, new WailaTooltipRenderer());
         ElementalCombatWTHIT.LOGGER.info("Waila Plugin registered.");
     }
 }
