@@ -34,7 +34,7 @@ description= "A WTHIT plugin for the mod Elemental Combat."
 [[dependencies.elementalcombat_wthit]]
     modId="elementalcombat"
     mandatory=true
-    versionRange="[1.2.4.0,)"
+    versionRange="[1.3.4.0,)"
     ordering="NONE"
     side="BOTH"
 [[dependencies.elementalcombat_wthit]]
