@@ -73,8 +73,8 @@ minecraft {
 dependencies {
     minecraft "net.minecraftforge:forge:${version_forge}"
     
-    implementation fg.deobf("mcp.mobius.waila:wthit-api:forge-${version_wthit}")
-	
+    implementation fg.deobf("mcp.mobius.waila:wthit:forge-${version_wthit}")
+
     implementation fg.deobf("curse.maven:elementalcombat-397825:${elementalcombat_id}")
     
     implementation fg.deobf(fileTree(dir: 'libs', include: '*.jar'))
@@ -85,6 +85,12 @@ repositories {
     maven { 
         name = "wthit"
         url = "https://maven.bai.lol"
+    }
+    maven {
+        url "https://www.cursemaven.com"
+        content {
+            includeGroup "curse.maven"
+        }
     }
     flatDir {
         dirs("libs")
