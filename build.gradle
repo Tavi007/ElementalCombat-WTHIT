@@ -135,7 +135,9 @@ repositories {
 dependencies {
     minecraft "net.minecraftforge:forge:${version_forge}"
     
-    compileOnly fg.deobf("mcp.mobius.waila:wthit-api:forge-${version_wthit}")
+    implementation fg.deobf("mcp.mobius.waila:wthit:forge-${version_wthit}")
+
+    implementation fg.deobf("curse.maven:elementalcombat-397825:${elementalcombat_id}")
     
     testImplementation group: 'junit', name: 'junit', version: '4.13.2'
     testImplementation("junit:junit:4.13.2")
